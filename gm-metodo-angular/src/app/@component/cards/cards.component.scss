@@ -1,0 +1,48 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    justify-items: center;
+    margin: 2rem auto 0; /* Aggiunto il margin-top di 2rem */
+    max-width: 800px;
+  }
+  
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    max-width: 400px;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card__info {
+    padding: 0.75rem;
+    background-color: white; /* Aggiunto il colore di sfondo bianco */
+  }
+  
+  .card__info h3 {
+    margin-top: 0;
+    text-align: center;
+    color: white; /* Aggiunto il colore del testo bianco */
+    background-color: black; /* Aggiunto il colore di sfondo nero */
+    border-radius: 35%; /* Aggiunto il bordo ovale */
+    width: 60px; /* Regolato la larghezza del titolo */
+    height: 60px; /* Regolato l'altezza del titolo */
+    line-height: 60px; /* Centrato verticalmente il testo all'interno del titolo */
+    margin: 0 auto; /* Centrato orizzontalmente il titolo all'interno della card */
+  }
+  
+  
+  .card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px; /* Aggiunto il bordo arrotondato all'immagine */
+  }
+  

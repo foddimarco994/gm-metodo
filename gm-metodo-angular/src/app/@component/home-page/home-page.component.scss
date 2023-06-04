@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background: url('../../../assets/immagini/5.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glass{
+    width: 50vw;
+    height: 50vh;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0.0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0px 7px 30px 0 rgba(0,0,0,0.5);
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.text-item{
+    position: relative;
+    text-decoration: none;
+    height: 3rem;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.text-container{
+
+    position: absolute;
+    display: flex;
+    align-items: center;
+    color: var(--color);
+    transition: 0.75s;
+}
+
+.text-container span{
+    display: inline-block;
+    line-height: 1;
+    font-size: 3rem;
+    text-transform: uppercase;
+    transition: 0.75s;
+    transition-delay: calc(0.075s + var(--index));
+    margin: 0 2px;
+}
+
+.text-container span {
+    font-size: 3rem;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .text-container span {
+      font-size: 2rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .text-container span {
+      font-size: 1.5rem;
+    }
+  }
+
+.text-container.origin span{
+    transform-origin: bottom;
+}
+
+.text-item:hover .text-container.origin span{
+    transform: translateY(-100%) rotateX(90deg);
+}
+
+.text-container.clone span{
+    transform-origin: top;
+    transform: translateY(100%) rotateX(90deg);
+}
+
+
+.text-item:hover .text-container.clone span{
+    transform: translateY(0%) rotateX(0deg);
+}
+
+.text-item:hover .text-container {
+    filter: drop-shadow(0 0 10px var(--color)) drop-shadow(0 0 50px var(--color));
+}

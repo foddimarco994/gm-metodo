@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+// ---
+// Material Theme
+// ---
+
+// Color palettes
+@import "./palettes.scss";
+
+
+
+// ---
+// BOOTSTRAP Theme
+// ---
+
+@import "bootstrap/scss/bootstrap";
+
+// GLOBAL STYLES
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

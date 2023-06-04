@@ -1,0 +1,44 @@
+<nav class="navbar">
+    <div class="logo">
+      <a href="/">
+        <img src="./assets/logo.png" alt="Logo">
+      </a>
+    </div>
+    <div class="navbar__menu">
+      <ul class="navbar__list">
+        <li class="navbar__item">
+          <a class="navbar__link" href="#metodogm">MetodoGM</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="#recensione">Recensione</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="#corso">Corso</a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="#contatti">Contatti</a>
+        </li>
+      </ul>
+    </div>
+    <button class="navbar__toggle" (click)="toggleNavbar()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="navbar__menu--mobile" [ngClass]="{'navbar__menu--active': navbarOpen}">
+      <ul class="navbar__list--mobile">
+        <li class="navbar__item--mobile">
+          <a class="navbar__link--mobile" href="#metodogm" (click)="toggleNavbar()">MetodoGM</a>
+        </li>
+        <li class="navbar__item--mobile">
+          <a class="navbar__link--mobile" href="#recensione" (click)="toggleNavbar()">Recensione</a>
+        </li>
+        <li class="navbar__item--mobile">
+          <a class="navbar__link--mobile" href="#corso" (click)="toggleNavbar()">Corso</a>
+        </li>
+        <li class="navbar__item--mobile">
+          <a class="navbar__link--mobile" href="#contatti" (click)="toggleNavbar()">Contatti</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
