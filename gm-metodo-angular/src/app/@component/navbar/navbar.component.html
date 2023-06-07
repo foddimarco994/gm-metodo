@@ -1,22 +1,22 @@
 <nav class="navbar">
     <div class="logo">
-      <a href="/">
+      <a href="/" routerLink="/page" (click)="scrollToTop()">
         <img src="../../../assets/immagini/hero-mgm_logo.jpeg" alt="Logo">
       </a>
     </div>
     <div class="navbar__menu">
       <ul class="navbar__list">
         <li class="navbar__item">
-          <a class="navbar__link" href="#metodogm">MetodoGM</a>
+          <a class="navbar__link" routerLink="/page" href="#metodogm" (click)="scrollToSection('metodogm')">Metodo GM</a>
         </li>
         <li class="navbar__item">
-          <a class="navbar__link" href="#recensione">Recensione</a>
+          <a class="navbar__link--mobile" routerLink="/page" href="#recensione" (click)="scrollToSection('recensione')">I nostri Esperti</a>
         </li>
         <li class="navbar__item">
-          <a class="navbar__link" href="#corso">Corso</a>
+          <a class="navbar__link" routerLink="/page" href="#corso" (click)="scrollToSection('corso')">Corso</a>
         </li>
         <li class="navbar__item">
-          <a class="navbar__link" href="#contatti">Contatti</a>
+          <a class="navbar__link" routerLink="/page" href="#contatti" (click)="scrollToSection('contatti')">Contatti</a>
         </li>
       </ul>
     </div>
@@ -28,16 +28,16 @@
     <div class="navbar__menu--mobile" [ngClass]="{'navbar__menu--active': navbarOpen}">
       <ul class="navbar__list--mobile">
         <li class="navbar__item--mobile">
-          <a class="navbar__link--mobile" href="#metodogm" (click)="toggleNavbar()">MetodoGM</a>
+          <a class="navbar__link--mobile" routerLink="/page" href="#metodogm" (click)="toggleNavbar()" (click)="scrollToSection('metodogm')">MetodoGM</a>
         </li>
         <li class="navbar__item--mobile">
-          <a class="navbar__link--mobile" href="#recensione" (click)="toggleNavbar()">Recensione</a>
+          <a class="navbar__link--mobile" routerLink="/page" href="#recensione" (click)="toggleNavbar()" (click)="scrollToSection('recensione')">I nostri Esperti</a>
         </li>
         <li class="navbar__item--mobile">
-          <a class="navbar__link--mobile" href="#corso" (click)="toggleNavbar()">Corso</a>
+          <a class="navbar__link--mobile" routerLink="/page" href="#corso" (click)="toggleNavbar()" (click)="scrollToSection('corso')">Corso</a>
         </li>
         <li class="navbar__item--mobile">
-          <a class="navbar__link--mobile" href="#contatti" (click)="toggleNavbar()">Contatti</a>
+          <a class="navbar__link--mobile" routerLink="/page" href="#contatti" (click)="toggleNavbar()" (click)="scrollToSection('contatti')">Contatti</a>
         </li>
       </ul>
     </div>
