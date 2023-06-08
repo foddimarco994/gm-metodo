@@ -2,7 +2,7 @@
     background-color: black;
     color: white;
     padding: 20px;
-    max-width: 800px;
+    max-width: 1024px;
     margin: 50px auto 0;
     background: linear-gradient(135deg, rgba(255,255,255,0.5),rgba(255,255,255,0.0));
     backdrop-filter: blur(10px);
@@ -23,4 +23,10 @@
     margin-top: 0;
     padding-top: 10px;
     text-align: justify;
+  }
+
+  @media screen and (max-width: 768px) {
+    .glass {
+      margin: 2rem 1rem; /* Aggiunto un margine esterno di 1rem quando la larghezza dello schermo è inferiore a 768px */
+    }
   }

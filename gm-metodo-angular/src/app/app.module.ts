@@ -15,6 +15,7 @@ import { NavbarComponent } from './@component/navbar/navbar.component';
 import { PageComponent } from './@component/page/page.component';
 import { PageSectionComponent } from './@component/page-section/page-section.component';
 import { RecensioneComponent } from './@component/recensione/recensione.component';
+import { HeroImgComponent } from './@component/hero-img/hero-img.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { RecensioneComponent } from './@component/recensione/recensione.componen
     NavbarComponent,
     PageComponent,
     PageSectionComponent,
-    RecensioneComponent
+    RecensioneComponent,
+    HeroImgComponent
   ],
   imports: [
     BrowserModule,

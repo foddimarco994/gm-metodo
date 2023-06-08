@@ -4,7 +4,7 @@
     grid-gap: 1rem;
     justify-items: center;
     margin: 2rem auto 0; /* Aggiunto il margin-top di 2rem */
-    max-width: 800px;
+    max-width: 1024px;
   }
   
   .card {
@@ -12,7 +12,8 @@
     border-radius: 4px;
     overflow: hidden;
     transition: all 0.3s ease;
-    max-width: 400px;
+    max-width: 500px;
+    max-height: 400px;
     box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
   }
   
@@ -40,13 +41,17 @@
     margin: 0 auto;
   }
   
-  
   .card img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Aggiunto il valore object-fit: cover */
     display: block;
     transition: scale 400ms;
-    border-radius: 4px; /* Aggiunto il bordo arrotondato all'immagine */
+    border-radius: 4px;
   }
   
-  
+  @media screen and (max-width: 768px) {
+    .card {
+    margin: 2rem 1rem; /* Aggiunto un margine esterno di 1rem quando la larghezza dello schermo è inferiore a 768px */
+    }
+    }
