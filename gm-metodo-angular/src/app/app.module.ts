@@ -16,6 +16,7 @@ import { PageComponent } from './@component/page/page.component';
 import { PageSectionComponent } from './@component/page-section/page-section.component';
 import { RecensioneComponent } from './@component/recensione/recensione.component';
 import { HeroImgComponent } from './@component/hero-img/hero-img.component';
+import { FormComponent } from './@component/form/form.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { HeroImgComponent } from './@component/hero-img/hero-img.component';
     PageComponent,
     PageSectionComponent,
     RecensioneComponent,
-    HeroImgComponent
+    HeroImgComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
