@@ -25,8 +25,9 @@
     text-align: justify;
   }
 
-  @media screen and (max-width: 768px) {
-    .glass {
-      margin: 2rem 1rem; /* Aggiunto un margine esterno di 1rem quando la larghezza dello schermo è inferiore a 768px */
-    }
+  @media screen and (max-width: 768px),
+       (min-width: 769px) and (max-width: 1024px) {
+  .glass {
+    margin: 2rem 1rem; /* Margine esterno di 1rem quando la larghezza dello schermo è inferiore a 768px o compresa tra 769px e 1024px */
   }
+}

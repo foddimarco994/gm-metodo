@@ -8,7 +8,7 @@
   }
   
   .card {
-    border: 2px solid #ddd;
+    border: 2px solid rgba(255,255,255,0.2);
     border-radius: 4px;
     overflow: hidden;
     transition: all 0.3s ease;
@@ -27,17 +27,17 @@
   
   .card__info {
     padding: 0.75rem;
-    background-color: white; /* Aggiunto il colore di sfondo bianco */
+    background-color: #343a40; /* Aggiunto il colore di sfondo bianco */
   }
   
   .card__info h3 {
     margin-top: 0;
     text-align: center;
-    color: black;
+    color: white;
     border-radius: 32px;
     width: 80px;
-    height: 80px;
-    line-height: 80px;
+    height: 20px;
+    line-height: 20px;
     margin: 0 auto;
   }
   
@@ -50,8 +50,9 @@
     border-radius: 4px;
   }
   
-  @media screen and (max-width: 768px) {
-    .card {
-    margin: 2rem 1rem; /* Aggiunto un margine esterno di 1rem quando la larghezza dello schermo è inferiore a 768px */
-    }
-    }
+  @media screen and (max-width: 768px),
+       (min-width: 769px) and (max-width: 1024px) {
+  .card {
+    margin: 2rem 1rem; /* Margine esterno di 1rem quando la larghezza dello schermo è inferiore a 768px o compresa tra 769px e 1024px */
+  }
+}

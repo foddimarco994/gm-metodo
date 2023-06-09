@@ -11,11 +11,11 @@
     background: linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0.0));
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border-radius: 20px;
+    border-radius: 10px;
     border: 1px solid rgba(255,255,255,0.2);
     box-shadow: 0px 7px 30px 0 rgba(0,0,0,0.5);
   }
-  
+
   .navbar--fixed {
     position: fixed;
     top: 0;
@@ -25,9 +25,9 @@
   }
   
   .logo img {
-    max-width: 30%;
+    max-width: 20%;
     height: auto;
-    margin-right: -18rem; /* Aumentato margin-right a 2rem */
+    margin-right: 10rem; /* Aumentato margin-right a 2rem */
   }
   
   .navbar__menu {
@@ -104,7 +104,7 @@
   }
 
   .navbar__menu--mobile {
-    background-color: #333;
+    background-color: #343a40;
     position: fixed;
     top: 0;
     right: 0; /* Spostato a destra */
@@ -117,6 +117,10 @@
     overflow: hidden;
     border-radius: 20px;
   }
+
+  .navbar__menu--mobile .navbar__list--mobile {
+    margin-top: 4rem; 
+  }
   
   .navbar__menu--active {
     opacity: 1;
@@ -126,7 +130,7 @@
   }
   
   .navbar__list--mobile {
-    display: flex;
+    text-align: center;
     flex-direction: column;
     justify-content: center;
     align-items: center;

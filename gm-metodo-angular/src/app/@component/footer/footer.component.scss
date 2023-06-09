@@ -12,31 +12,61 @@ footer {
     margin-bottom: 5px;
   }
   
-  .social-icons {
-    display: flex;
+  .icons{
     justify-content: center;
-    align-items: center;
-  }
-  
-  .social-icons a {
+    display:flex;
+    column-gap: 25px;
+}
+
+.icon{
+    background-color:#212529 ;
+    width: 60px;
+    height: 60px;
     display: inline-flex;
-    justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
-    margin: 0 10px;
-    border-radius: 50%;
-    background-color: #000;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 26px;
     color: #fff;
-    transition: all 0.3s ease;
-  }
+    border-radius: 50%;
+    outline: 2px solid #fff;
+    transition-property: 
+    outline-offset, outline-color,
+    background-color;
+    transition-duration: .25s;
+}
+
+.icon:hover{
+    outline-offset: 4px;
+}
+
+.icon:hover i{
+    animation: shake .25s;
+}
+
+.icon--facebook:hover{
+    background-color: #3b5998;
+    outline-color: #3b5998;
+}
+
+.icon--instagram:hover{
+    background-image: 
+    radial-gradient(circle at 30% 107%,
+    #fdf497 0%, #fdf497 5%,
+    #fd5949 45%, #d6249f 60%,
+    #285AEB 90%);
+    outline-color: #a02d76;
+}
+
+.icon--tiktok:hover{
+    background-color: black;
+    outline-color: black;
+}
+
+@keyframes shake{
+    10%{transform: rotate(15deg);}
+    20%{transform: rotate(-15deg);}
+    30%{transform: rotate(15deg);}
+    40%{transform: rotate(-15deg);}
+}
   
-  .social-icons a:hover {
-    background-color: #fff;
-    color: #000;
-  }
-  
-  #map {
-    height: 200px;
-    margin-top: 20px;
-  }
