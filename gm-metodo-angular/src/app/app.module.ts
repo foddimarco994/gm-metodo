@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms'; 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,7 +10,6 @@ import { ContattiComponent } from './@component/contatti/contatti.component';
 import { CorsoComponent } from './@component/corso/corso.component';
 import { FooterComponent } from './@component/footer/footer.component';
 import { HeroContentComponent } from './@component/hero-content/hero-content.component';
-import { HomePageComponent } from './@component/home-page/home-page.component';
 import { MetodoGmComponent } from './@component/metodo-gm/metodo-gm.component';
 import { NavbarComponent } from './@component/navbar/navbar.component';
 import { PageComponent } from './@component/page/page.component';
@@ -26,7 +26,6 @@ import { FormComponent } from './@component/form/form.component';
     CorsoComponent,
     FooterComponent,
     HeroContentComponent,
-    HomePageComponent,
     MetodoGmComponent,
     NavbarComponent,
     PageComponent,
@@ -38,7 +37,8 @@ import { FormComponent } from './@component/form/form.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

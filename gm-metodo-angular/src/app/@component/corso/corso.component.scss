@@ -1,37 +1,50 @@
-.glass {
-    background-color: black;
-    color: white;
-    padding: 20px;
-    max-width: 1024px;
-    margin: 70px auto 0;
-    margin-bottom: 30px;
-    background: linear-gradient(135deg, rgba(255,255,255,0.5),rgba(255,255,255,0.0));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 20px;
-    border: 1px solid rgba(255,255,255,0.2);
-    box-shadow: 0px 7px 30px 0 rgba(0,0,0,0.5);
-  }
-  
- .title {
-  background-color: transparent; /* Rimuovi lo sfondo nero */
-  color: white;
-  padding: 10px;
-  margin-top: 0;
-  border-radius: 10px 10px 0 0;
-  display: flex; /* Aggiungi display: flex per allineare l'icona verticalmente */
-  align-items: center; /* Allinea l'icona verticalmente */
-}
-  
-  .content {
-    margin-top: 0;
-    padding-top: 10px;
-    text-align: justify;
-  }
+$color_1: white;
 
-  @media screen and (max-width: 768px),
-  (min-width: 769px) and (max-width: 1024px) {
 .glass {
-margin: 2rem 1rem; /* Margine esterno di 1rem quando la larghezza dello schermo è inferiore a 768px o compresa tra 769px e 1024px */
-  }
+	background-color: black;
+	color: $color_1;
+	padding: 20px;
+	max-width: 1024px;
+	margin: 70px auto 0;
+	margin-bottom: 30px;
+	background: linear-gradient(135deg, rgba(255,255,255,0.5),rgba(255,255,255,0.0));
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border-radius: 20px;
+	border: 1px solid rgba(255,255,255,0.2);
+	box-shadow: 0px 7px 30px 0 rgba(0,0,0,0.5);
+}
+.title {
+	background-color: transparent;
+	color: $color_1;
+	padding: 10px;
+	margin-top: 0;
+	border-radius: 10px 10px 0 0;
+	display: flex;
+	align-items: center;
+	&::after {
+		content: "";
+		display: inline-block;
+		width: 70px;
+		height: 70px;
+		background-image: url('../../../assets/immagini/italy.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		margin-left: 10px;
+	}
+}
+.content {
+	margin-top: 0;
+	padding-top: 10px;
+	text-align: justify;
+}
+@media screen and (max-width: 768px) {
+	.glass {
+		margin: 2rem 1rem;
+	}
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+	.glass {
+		margin: 2rem 1rem;
+	}
 }
