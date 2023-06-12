@@ -1,21 +1,40 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ContactFormService } from 'src/app/@service/contactForm.service';
+import { ContactForm } from 'src/app/model/form';
 
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.scss']
 })
-export class FormComponent {
-  nomeCognome: string = '';
-  email: string = '';
-  commento: string = '';
+export class FormComponent implements OnInit {
+  formData: ContactForm = {
+    nomeCognome: '',
+    email: '',
+    commento: ''
+  };
   privacyAccettata = false;
+
+  constructor(private contactFormService: ContactFormService) {}
+
+  ngOnInit() {
+    // Qui puoi inizializzare le dipendenze e fare altre operazioni necessarie
+  }
 
   controllaPrivacy() {
     this.privacyAccettata = !this.privacyAccettata;
   }
 
   submitForm() {
-    // Logica per l'invio del modulo
+    this.contactFormService.contactForm(this.formData).subscribe({
+      next: (response) => {
+        console.log('Successo:', response);
+        // Gestisci la risposta dal server
+      },
+      error: (error) => {
+        console.error('Errore:', error);
+        // Gestisci gli errori
+      }
+    });
   }
 }

@@ -17,6 +17,8 @@ import { PageSectionComponent } from './@component/page-section/page-section.com
 import { RecensioneComponent } from './@component/recensione/recensione.component';
 import { HeroImgComponent } from './@component/hero-img/hero-img.component';
 import { FormComponent } from './@component/form/form.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ContactFormService } from './@service/contactForm.service';
 
 @NgModule({
   declarations: [
@@ -38,9 +40,10 @@ import { FormComponent } from './@component/form/form.component';
     BrowserModule,
     AppRoutingModule,
     AngularMaterialModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ContactFormService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
