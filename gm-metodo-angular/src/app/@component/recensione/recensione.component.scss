@@ -1,20 +1,18 @@
-$color_1: #fff;
-
 @keyframes shake {
 	10% {
-		transform: rotate(15deg);
+	  transform: rotate(15deg);
 	}
 	20% {
-		transform: rotate(-15deg);
+	  transform: rotate(-15deg);
 	}
 	30% {
-		transform: rotate(15deg);
+	  transform: rotate(15deg);
 	}
 	40% {
-		transform: rotate(-15deg);
+	  transform: rotate(-15deg);
 	}
-}
-.card {
+  }
+  .card {
 	margin: 70px auto 0;
 	max-width: 700px;
 	padding: 20px 40px;
@@ -24,33 +22,37 @@ $color_1: #fff;
 	justify-content: space-between;
 	border: 1px solid #ccc;
 	border-radius: 5px;
-}
-.card__text {
+  }
+  
+  .card__text {
 	flex: 1;
 	margin-right: 20px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	h2 {
-		font-size: 24px;
-		margin-bottom: 10px;
-	}
-}
-.card__image {
+  }
+  .card__text h2 {
+	font-size: 24px;
+	margin-bottom: 10px;
+  }
+  
+  .card__image {
 	flex: 1;
-	img {
-		max-width: 100%;
-		height: auto;
-		border-radius: 5px;
-	}
-}
-.icons {
+  }
+  .card__image img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 5px;
+  }
+  
+  .icons {
 	justify-content: center;
 	display: flex;
 	column-gap: 25px;
-}
-.icon {
+  }
+  
+  .icon {
 	background-color: #212529;
 	width: 60px;
 	height: 60px;
@@ -59,31 +61,31 @@ $color_1: #fff;
 	justify-content: center;
 	text-decoration: none;
 	font-size: 26px;
-	color: $color_1;
+	color: #fff;
 	border-radius: 50%;
 	outline: 2px solid #fff;
 	transition-property: outline-offset, outline-color, background-color;
-	transition-duration: .25s;
-	&:hover {
-		outline-offset: 4px;
-		i {
-			animation: shake .25s;
-		}
-	}
-}
-.icon--instagram {
-	&:hover {
-		background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-		outline-color: #a02d76;
-	}
-}
-@media screen and (max-width: 768px) {
+	transition-duration: 0.25s;
+  }
+  .icon:hover {
+	outline-offset: 4px;
+  }
+  .icon:hover i {
+	animation: shake 0.25s;
+  }
+  
+  .icon--instagram:hover {
+	background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+	outline-color: #a02d76;
+  }
+  
+  @media screen and (max-width: 768px) {
 	.card {
-		margin: 2rem 1rem;
+	  margin: 2rem 1rem;
 	}
-}
-@media (min-width: 769px) and (max-width: 1024px) {
+  }
+  @media (min-width: 769px) and (max-width: 1024px) {
 	.card {
-		margin: 2rem 1rem;
+	  margin: 2rem 1rem;
 	}
-}
+  }
