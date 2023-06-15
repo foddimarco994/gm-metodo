@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: |
-          cd gm-metodo/gm-metodo-angular
+          cd gm-metodo-angular
           npm ci
           npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
