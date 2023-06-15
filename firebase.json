@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "/dist/gm-metodo-angular",
+    "public": "/gm-metodo-angular/dist/gm-metodo-angular",
     "ignore": [
       "firebase.json",
       "**/.*",
