@@ -15,7 +15,7 @@ jobs:
           cd gm-metodo-angular
           npm ci
           npm run build
-          cd ../gm-metodo-app
+          cd ../../gm-metodo-app
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
