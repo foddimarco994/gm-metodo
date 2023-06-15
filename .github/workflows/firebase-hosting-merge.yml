@@ -21,6 +21,6 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_METODO_GM }}'
           channelId: live
           projectId: metodo-gm
-          entryPoint: ../gm-metodo-app
+          entryPoint: C:\Users\foddi\OneDrive\Desktop\gm-metodo-app
 
 
