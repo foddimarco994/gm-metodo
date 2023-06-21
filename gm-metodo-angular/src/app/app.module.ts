@@ -19,6 +19,8 @@ import { HeroImgComponent } from './@component/hero-img/hero-img.component';
 import { FormComponent } from './@component/form/form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactFormService } from './@service/contactForm.service';
+import { PrivacyPolicyComponent } from './@component/privacy-policy/privacy-policy.component';
+import { CookieBannerComponent } from './@component/cookie-banner/cookie-banner.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { ContactFormService } from './@service/contactForm.service';
     PageSectionComponent,
     RecensioneComponent,
     HeroImgComponent,
-    FormComponent
+    FormComponent,
+    PrivacyPolicyComponent,
+    CookieBannerComponent
   ],
   imports: [
     BrowserModule,
