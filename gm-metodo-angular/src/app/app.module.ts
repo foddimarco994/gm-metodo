@@ -21,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ContactFormService } from './@service/contactForm.service';
 import { PrivacyPolicyComponent } from './@component/privacy-policy/privacy-policy.component';
 import { CookieBannerComponent } from './@component/cookie-banner/cookie-banner.component';
+import { TerminiCondizioniComponent } from './@component/termini-condizioni/termini-condizioni.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { CookieBannerComponent } from './@component/cookie-banner/cookie-banner.
     HeroImgComponent,
     FormComponent,
     PrivacyPolicyComponent,
-    CookieBannerComponent
+    CookieBannerComponent,
+    TerminiCondizioniComponent
   ],
   imports: [
     BrowserModule,

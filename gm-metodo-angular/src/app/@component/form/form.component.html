@@ -13,10 +13,6 @@
       <label for="commento">Commento</label>
       <textarea id="commento" name="commento" [(ngModel)]="formData.commento" [ngModelOptions]="{standalone: true}"></textarea>
     </div>
-    <div class="privacy">
-      <input type="checkbox" [(ngModel)]="privacyAccettata" (change)="controllaPrivacy()" [ngModelOptions]="{standalone: true}">
-      <label for="privacy">Accetto la privacy</label>
-    </div>
     <button type="submit" [disabled]="!myForm.form.valid || !privacyAccettata">Invia</button>
   </form>
 </div>
