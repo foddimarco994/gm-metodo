@@ -7,34 +7,27 @@ import { ContactForm } from 'src/app/model/form';
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.scss']
 })
-export class FormComponent implements OnInit {
-  formData: ContactForm = {
-    nomeCognome: '',
+export class FormComponent {
+  contactForm = {
+    name: '',
     email: '',
-    commento: ''
+    comment: '',
+    privacy: false
   };
-  privacyAccettata = false;
 
-  constructor(private contactFormService: ContactFormService) {}
+  constructor(private contactService: ContactFormService) { }
 
-  ngOnInit() {
-    // Qui puoi inizializzare le dipendenze e fare altre operazioni necessarie
-  }
-
-  controllaPrivacy() {
-    this.privacyAccettata = !this.privacyAccettata;
-  }
-
-  submitForm() {
-    this.contactFormService.contactForm(this.formData).subscribe({
-      next: (response) => {
-        console.log('Successo:', response);
-        // Gestisci la risposta dal server
-      },
-      error: (error) => {
-        console.error('Errore:', error);
-        // Gestisci gli errori
-      }
-    });
+  onSubmit() {
+    this.contactService.sendContactForm(this.contactForm)
+      .subscribe(
+        response => {
+          console.log('Messaggio inviato correttamente:', response);
+          // Aggiungi qui la gestione della risposta, se necessario
+        },
+        error => {
+          console.error('Errore durante l\'invio del messaggio:', error);
+          // Aggiungi qui la gestione degli errori, se necessario
+        }
+      );
   }
 }

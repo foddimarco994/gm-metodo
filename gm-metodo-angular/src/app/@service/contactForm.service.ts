@@ -8,13 +8,11 @@ import { Observable } from 'rxjs';
 })
 export class ContactFormService {
 
-  contactFormUrl = ('https://formspree.io/f/mrgvnzal')
+  private contactUrl = 'https://formspree.io/f/mrgvnzal';
 
   constructor(private http: HttpClient) { }
 
-  contactForm(formData: ContactForm): Observable<any> {
-    const url = 'https://formspree.io/f/mrgvnzal';
-  
-    return this.http.post(url, formData);
+  sendContactForm(contactForm: any) {
+    return this.http.post(this.contactUrl, contactForm);
   }
 }
