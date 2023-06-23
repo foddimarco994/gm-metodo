@@ -6,13 +6,22 @@
   <form (ngSubmit)="onSubmit()">
     <div class="input-group">
       <label for="name">*Nome e Cognome</label>
-      <input type="text" id="name" name="name" [(ngModel)]="contactForm.name" required>
+      <input type="text" id="name" name="name" [(ngModel)]="contactForm.name" required
+        (blur)="contactForm.nameTouched = true">
+      <div *ngIf="!contactForm.name && contactForm.nameTouched" class="error-message">
+        Questo campo è obbligatorio.
+      </div>
     </div>
-
+    
     <div class="input-group">
       <label for="email">*Email</label>
-      <input type="email" id="email" name="email" [(ngModel)]="contactForm.email" required>
+      <input type="email" id="email" name="email" [(ngModel)]="contactForm.email" required
+        (blur)="contactForm.emailTouched = true">
+      <div *ngIf="!contactForm.email && contactForm.emailTouched" class="error-message">
+        Questo campo è obbligatorio.
+      </div>
     </div>
+    
 
     <div class="input-group">
       <label for="comment">Commento:</label>
