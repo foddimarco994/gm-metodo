@@ -1,14 +1,14 @@
 import { HttpErrorResponse } from '@angular/common/http';
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 import { ContactFormService } from 'src/app/@service/contactForm.service';
 
-
 @Component({
-  selector: 'app-form',
-  templateUrl: './form.component.html',
-  styleUrls: ['./form.component.scss']
+  selector: 'app-event',
+  templateUrl: './event.component.html',
+  styleUrls: ['./event.component.scss']
 })
-export class FormComponent {
+export class EventComponent {
+
   contactForm = {
     name: '',
     email: '',
@@ -61,4 +61,5 @@ export class FormComponent {
     // Implementa la tua logica di validazione dell'email qui
     return true; // Cambia questa riga con la tua logica di validazione
   }
+
 }
